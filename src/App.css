@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  overflow: hidden;
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(25, 152, 187);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+span {
+  background-color: rgba(2, 2, 2, 0.322);
   color: white;
+  backdrop-filter: blur(12px);
+  padding: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.1s ease;
+}
+span:hover {
+  background-color: rgba(2, 2, 2, 0.795);
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* animations */
+.color-change-5x {
+  -webkit-animation: color-change-5x 8s linear infinite alternate both;
+  animation: color-change-5x 8s linear infinite alternate both;
+}
+@-webkit-keyframes color-change-5x {
+  0% {
+    background: #2667c9;
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    background: #0f9c91;
+  }
+  50% {
+    background: #5786cc;
+  }
+  75% {
+    background: #2f5997;
+  }
+  100% {
+    background: #544cbe;
+  }
+}
+@keyframes color-change-5x {
+  0% {
+    background: #2667c9;
+  }
+  25% {
+    background: #0f9c91;
+  }
+  50% {
+    background: #5786cc;
+  }
+  75% {
+    background: #2f5997;
+  }
+  100% {
+    background: #544cbe;
+  }
+}
+
+.products-home-animated {
+  animation: products-home-animation 1s ease-in linear;
+}
+
+/* Transition Animation */
+
+@keyframes products-home-transition {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
